@@ -1,0 +1,16 @@
+textarea{
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: transparent;
+    flex: auto;
+    
+}
+
+form{
+    background-color: rgba(143, 202, 202, 0.452);
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

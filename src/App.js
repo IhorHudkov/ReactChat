@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ListOfContacts from './ListOfContacts';
+import InputForMessage from './InputForMessage';
+import ListOfMessages from './ListOfMessages';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-wrapper'>
+      <header></header>
+      <div className='wrapper'>
+        <aside>
+          <div className='search-contact'>
+            <input type='search'></input>
+            <button>Search</button>
+          </div>
+          <ListOfContacts></ListOfContacts>
+        </aside>
+        <main>
+          <div className='main'>
+            <InputForMessage></InputForMessage>
+            <ListOfMessages></ListOfMessages>
+          </div>
+        </main>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
