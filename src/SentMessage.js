@@ -1,11 +1,11 @@
 import React from 'react'
 import './SentMessage.css'
 
-function SentMessage() {
+function SentMessage({text}) {
     return (
         <div className='message'>
             <span className='textOfMesssage'>
-                <p>My cool message</p>
+                <p>{text}</p>
             </span>
         </div>
     )

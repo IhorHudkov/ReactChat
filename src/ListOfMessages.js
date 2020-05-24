@@ -1,27 +1,20 @@
 import React from 'react'
 import SentMessage from './SentMessage'
+import App from './App'
 import './ListOfMessages.css'
 
 
-function ListOfMessages()
+
+function ListOfMessages({redrawList})
 {
     return(
         <div className='list-of-messages'>
-            <SentMessage></SentMessage>
-            <p>1</p>
-            <SentMessage></SentMessage>
-            <p>2</p>
-            <SentMessage></SentMessage>
-            <SentMessage></SentMessage>
-            <SentMessage></SentMessage>
-            <SentMessage></SentMessage>
-            <SentMessage></SentMessage>
-            <SentMessage></SentMessage>
-            <SentMessage></SentMessage>
-            <SentMessage></SentMessage>
-            <SentMessage></SentMessage>
 
-        
+            {redrawList().map(message =>{
+                return(<SentMessage text={message}></SentMessage>)
+            })}
+            
+                    
         </div>
     )
 }
