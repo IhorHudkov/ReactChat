@@ -1,22 +1,31 @@
 import React from 'react'
 import SentMessage from './SentMessage'
-import App from './App'
 import './ListOfMessages.css'
 
 
 
-function ListOfMessages({redrawList})
-{
-    return(
-        <div className='list-of-messages'>
+class ListOfMessages extends React.Component {
+    constructor(props) {
+        super(props)
+        this.ref = React.createRef()
+        
+    }
 
-            {redrawList().map(message =>{
-                return(<SentMessage text={message}></SentMessage>)
-            })}
-            
-                    
-        </div>
-    )
+    componentDidUpdate(){
+        this.ref.current.scrollTop = this.ref.current.scrollHeight
+    } 
+
+    render() {
+        return (
+            <div className='wrapper-for-list-of-messages' >
+                <div className='list-of-messages' ref={this.ref}>
+                    {this.props.redrawList().map(message => {
+                        return (<SentMessage text={message}></SentMessage>)
+                    })}
+                </div>
+            </div>
+        )
+    }
 }
 
 export default ListOfMessages

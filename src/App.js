@@ -13,9 +13,7 @@ function App() {
   }
 
   function returnNewArrOfMessages(){
-    
       return arrOfMessages
-
   }
 
   return (
