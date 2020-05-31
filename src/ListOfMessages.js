@@ -3,12 +3,11 @@ import SentMessage from './SentMessage'
 import './ListOfMessages.css'
 
 
-
 class ListOfMessages extends React.Component {
+    
     constructor(props) {
         super(props)
         this.ref = React.createRef()
-        
     }
 
     componentDidUpdate(){
@@ -20,7 +19,7 @@ class ListOfMessages extends React.Component {
             <div className='wrapper-for-list-of-messages' >
                 <div className='list-of-messages' ref={this.ref}>
                     {this.props.redrawList().map(message => {
-                        return (<SentMessage text={message}></SentMessage>)
+                        return (<SentMessage text={message.textOfMessage} key={message.id} flag={message.flag}></SentMessage>)
                     })}
                 </div>
             </div>

@@ -1,7 +1,27 @@
-li{
-    padding: 1.5rem;
-    margin: 10px 10px;
-    background-color: rgba(157, 179, 201, 0.171);
-    border-radius: 1rem;
-    
+li {
+  margin: 0;
+  padding: 0;
 }
+
+.contact__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px;
+  height: 70px;
+  background-color: rgba(157, 179, 201, 0.171);
+  border-radius: 1rem;
+}
+
+.contact__image {
+  width: 70px;
+  height: 70px;
+  border-radius: 1rem;
+}
+
+.contact__name {
+   color: lightslategray;
+   margin-right: 1rem;
+ }
+
+ 

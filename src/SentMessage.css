@@ -1,13 +1,25 @@
-.message{
+.myMessage{
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
 }
 
-.textOfMesssage{
-    
+.messageFromOther{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.textOfMessage{
     border-radius: 10px 10px 0 10px;
     border-style: dotted;
     border-color: teal;
+    border-width: 1px;
+}
+
+.textOfMessageFromOther{
+    border-radius: 10px 10px 10px 0;
+    border-style: dotted;
+    border-color: rgb(38, 0, 128);
     border-width: 1px;
 }
